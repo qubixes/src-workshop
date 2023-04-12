@@ -1,0 +1,27 @@
+---
+- name: Some playbook
+  hosts: localhost
+  tasks:
+  - name: Print something
+    debug:
+      msg: "Printing a test message"
+
+  - name: Create a directory if it does not exist
+    ansible.builtin.file:
+      path: /scratch/test
+      state: directory
+      mode: '0755'
+
+  - name: Git clone
+    git:
+      repo: "{{ MyRepository }}"
+      dest: /scratch/src-workshop2/
+      clone: yes
+      update: yes
+
+  - name: Git clone
+    git:
+      repo: "{{ MyRepository }}"
+      dest: /home/jelletreep/data/volume_2/src-workshop2/
+      clone: yes
+      update: yes
