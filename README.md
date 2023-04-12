@@ -57,11 +57,38 @@ Now you can use Ansible to run tasks on the Research Cloud workspace.
 `-become` run the command as root  
 
 Now we know how to run commands remotely via ansible, now let's create a script.
-In Ansible call this a playbook.
+In Ansible this is called a 'playbook'.
 
-5. Create a directory and an ‘ansible playbook’ called  test.yml
-run the example script
+5. Create a new directory and an ‘ansible playbook’ called e.g. `test.yml`
+Add the following script:
+```
+---
+- name: Some playbook
+  hosts: server1
+  tasks:
+  - name: Print something
+    debug:
+      msg: "Printing a test message"
+```
 
+Run it as follows:
+`ansible-playbook test.yml -u <username>`
+
+Now extend with other commands (feel free to experiment :) )
+
+Example:
+```
+---
+- name: Some playbook
+  hosts: server1
+  tasks:
+  - name: Install ASReview LAB through pip
+    pip:
+      name: asreview
+  - name: Print something
+    debug:
+      msg: "Printing a test message"
+``` 
 
 
 6. create a script (git clone)
