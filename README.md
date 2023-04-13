@@ -104,7 +104,7 @@ Now create your own playbook in a public GitHub repository. The playbook will be
 The playbook should do the following
 
 1. Install git when it is not yet present (you could perform a separate check of the installed packages using [package_facts](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/package_facts_module.html) and then add a conditional task, but there is also a short-cut using the `state` in the [apt module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html#ansible-collections-ansible-builtin-apt-module))
-3. Clone a public GitHub repository. The creator of the workspace that uses this plugin should be able to specify the repository url during the creation of the workspace. Clone the repository to `/scratch`
+3. Clone a public GitHub repository. The creator of the workspace that uses this plugin should be able to specify the repository url during the creation of the workspace. Clone the repository to `/data/volume_2`
 Hint: it is possible to use 'parameters' in your ansible script. In the next step, you need to define the parameter in the Research cloud plugin as well so that the user can define the value when he creates a workspace. [More info](https://servicedesk.surf.nl/wiki/display/WIKI/Using+parameters)
 
 ### 8. Create a plugin 
