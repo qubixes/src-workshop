@@ -52,7 +52,7 @@ Now you can use Ansible to run tasks on the Research Cloud workspace.
 
 Run an `apt install` task on the workspace using ansible (e.g. install zip).
 
-`ansible server1 -m apt -a "name=zip state=latest" -u <username> –become`
+`ansible server1 -m apt -a "name=zip state=latest" -u <username> –-become`
 
 `-m` stands for Ansible module, in this case we use the `apt` module to run apt install remotely.  
 `-a` The -a option accepts options either through the `key=value` syntax or a JSON string   
