@@ -2,26 +2,14 @@
 - name: Some playbook
   hosts: localhost
   tasks:
-  - name: Print something
-    debug:
-      msg: "Printing a test message"
-
-  - name: Create a directory if it does not exist
-    ansible.builtin.file:
-      path: /scratch/test
-      state: directory
-      mode: '0755'
+  - name: Install latest git version
+    ansible.builtin.apt:
+      name: git
+      state: latest
 
   - name: Git clone
     git:
       repo: "{{ MyRepository }}"
-      dest: /scratch/src-workshop2/
-      clone: yes
-      update: yes
-
-  - name: Git clone
-    git:
-      repo: "{{ MyRepository }}"
-      dest: /data/volume_2/src-workshop2/
+      dest: /data/volume_2/
       clone: yes
       update: yes
