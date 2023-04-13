@@ -111,7 +111,7 @@ Hint: it is possible to use 'parameters' in your ansible script. In the next ste
 Now [create the plugin](https://servicedesk.surf.nl/wiki/display/WIKI/Create+a+plugin) in Research Cloud. Make sure to add the parameter that you used in the ansible script.
 
 ### 9. Create a new application
-Now [create a new application](https://servicedesk.surf.nl/wiki/display/WIKI/Create+an+application). You can use an existing application as a template (e.g. use Ubuntu 20.04 sudo enabled) and simply add your plugin.
+Now [create a new application](https://servicedesk.surf.nl/wiki/display/WIKI/Create+an+application). You can use an existing application as a template (e.g. use Ubuntu 20.04 sudo enabled), make sure to add `SRC External plugin` first and then simply add your plugin.
 
 ### 10. Create a new application offering
 Now [create a new application offering](https://servicedesk.surf.nl/wiki/display/WIKI/Create+an+application+offering). You can use an existing application offering as a template, but make sure to select the application that you just created.
