@@ -22,6 +22,6 @@
   - name: Git clone
     git:
       repo: "{{ MyRepository }}"
-      dest: /home/jelletreep/data/volume_2/src-workshop2/
+      dest: /data/volume_2/src-workshop2/
       clone: yes
       update: yes
